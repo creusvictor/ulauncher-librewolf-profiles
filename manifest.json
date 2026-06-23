@@ -1,7 +1,7 @@
 {
   "required_api_version": "^2.0.0",
-  "name": "Firefox Profiles",
-  "description": "Launch Firefox with an user profile",
+  "name": "LibreWolf Profiles",
+  "description": "Launch LibreWolf with an user profile",
   "developer_name": "Kleber Silva <kleber.swf@gmail.com>",
   "icon": "images/icon.png",
   "options": {
@@ -11,23 +11,23 @@
     {
       "id": "keyword",
       "type": "keyword",
-      "name": "Firefox Profile",
-      "description": "The keyword to activate Firefox profile selection",
-      "default_value": "fp"
+      "name": "LibreWolf Profile",
+      "description": "The keyword to activate LibreWolf profile selection",
+      "default_value": "lw"
     },
     {
-      "id": "firefox_folder",
+      "id": "librewolf_folder",
       "type": "input",
-      "name": "Firefox Configuration Folder",
-      "description": "Select the Firefox profiles folder. Find it inside `about:profiles` page.",
-      "default_value": "~/snap/firefox/common/.mozilla/firefox/"
+      "name": "LibreWolf Configuration Folder",
+      "description": "Select the LibreWolf profiles folder. Find it inside `about:profiles` page.",
+      "default_value": "~/.config/librewolf/librewolf/"
     },
     {
-      "id": "firefox_cmd",
+      "id": "librewolf_cmd",
       "type": "input",
-      "name": "Firefox Executable",
-      "description": "The command line to start Firefox. Usually `firefox`.",
-      "default_value": "firefox"
+      "name": "LibreWolf Executable",
+      "description": "The command line to start LibreWolf. Usually `librewolf`.",
+      "default_value": "librewolf"
     }
   ]
 }

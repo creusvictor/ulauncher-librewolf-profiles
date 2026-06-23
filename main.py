@@ -33,7 +33,7 @@ class KeywordQueryEventListener(EventListener):
         query = event.get_argument()
 
         if not query or len(self.profiles) == 0:
-            config_folder = os.path.expanduser(extension.preferences['firefox_folder'])
+            config_folder = os.path.expanduser(extension.preferences['librewolf_folder'])
             self.profiles = self.get_profiles(config_folder)
         
         profiles = self.profiles.copy()
@@ -53,7 +53,7 @@ class KeywordQueryEventListener(EventListener):
         entries.append(ExtensionResultItem(
             icon='images/icon.png',
             name='Profile Management',
-            description='Start Firefox profile management tool',
+            description='Start LibreWolf profile management tool',
             on_enter=ExtensionCustomAction('', keep_app_open=False)
         ))
         
@@ -62,7 +62,7 @@ class KeywordQueryEventListener(EventListener):
 
 class ItemEnterEventListener(EventListener):
     def on_event(self, event, extension):
-        subprocess.Popen([extension.preferences['firefox_cmd'], '-p', event.get_data()], start_new_session=True)
+        subprocess.Popen([extension.preferences['librewolf_cmd'], '-p', event.get_data()], start_new_session=True)
 
 
 if __name__ == '__main__':
