@@ -77,13 +77,6 @@ class KeywordQueryEventListener(EventListener):
                 on_enter=ExtensionCustomAction({'name': name, 'path': path}, keep_app_open=False)
             ))
 
-        entries.append(ExtensionResultItem(
-            icon='images/icon.png',
-            name='Profile Management',
-            description='Start LibreWolf profile management tool',
-            on_enter=ExtensionCustomAction('', keep_app_open=False)
-        ))
-
         return RenderResultListAction(entries)
 
 
